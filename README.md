@@ -1,4 +1,4 @@
-# page-preview-312519
+# @kamishnikov_da/page-preview
 
 Веб-компонент `<page-preview>` загружает HTML-страницу и показывает её название,
 первый заголовок `h1` и ссылку. Работает в браузере без зависимостей и внешних CDN.
@@ -6,13 +6,13 @@
 ## Установка и подключение
 
 ```sh
-npm install page-preview-312519
+npm install @kamishnikov_da/page-preview
 ```
 
 В приложении со сборщиком или настроенной import map:
 
 ```js
-import 'page-preview-312519';
+import '@kamishnikov_da/page-preview';
 ```
 
 Импорт сам регистрирует элемент. Дополнительный вызов регистрации не нужен.

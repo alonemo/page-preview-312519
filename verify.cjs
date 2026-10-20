@@ -19,7 +19,9 @@ const server = http.createServer((req, res) => {
     const send = () => { res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }); res.end(fixtures[req.url]); };
     return req.url === '/slow' ? setTimeout(send, 350) : send();
   }
-  const filename = path.join(__dirname, req.url === '/' ? 'demo/index.html' : req.url);
+  const filename = req.url === '/src/page-preview.js' && process.env.PUBLISHED_MODULE
+    ? process.env.PUBLISHED_MODULE
+    : path.join(__dirname, req.url === '/' ? 'demo/index.html' : req.url);
   if (!filename.startsWith(__dirname) || !fs.existsSync(filename) || !fs.statSync(filename).isFile()) {
     res.writeHead(404); return res.end('Not found');
   }
