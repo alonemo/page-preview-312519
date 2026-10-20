@@ -1,0 +1,16 @@
+{
+  "name": "page-preview-312519",
+  "version": "1.0.0",
+  "description": "Browser custom element for previewing an HTML page title and first heading",
+  "type": "module",
+  "exports": "./src/page-preview.js",
+  "files": ["src", "README.md", "LICENSE"],
+  "author": "Dmitry Kamyshnikov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alonemo/page-preview-312519.git"
+  },
+  "scripts": { "test": "node verify.cjs" },
+  "devDependencies": { "playwright": "^1.58.0" }
+}
